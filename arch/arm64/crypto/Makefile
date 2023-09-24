@@ -7,11 +7,6 @@
 # it under the terms of the GNU General Public License version 2 as
 # published by the Free Software Foundation.
 #
-ifeq ($(cc-name),clang)
-ccflags-y += -Wno-error=unneeded-internal-declaration
-endif
-
-ccflags-y += -O3
 
 obj-$(CONFIG_CRYPTO_SHA1_ARM64_CE) += sha1-ce.o
 sha1-ce-y := sha1-ce-glue.o sha1-ce-core.o
@@ -62,8 +57,6 @@ CFLAGS_aes-glue-ce.o	:= -DUSE_V8_CRYPTO_EXTENSIONS
 
 $(obj)/aes-glue-%.o: $(src)/aes-glue.c FORCE
 	$(call if_changed_rule,cc_o_c)
-
-ccflags-y := -O3
 
 ifdef REGENERATE_ARM64_CRYPTO
 quiet_cmd_perlasm = PERLASM $@

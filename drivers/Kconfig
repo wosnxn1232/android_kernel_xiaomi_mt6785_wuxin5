@@ -79,8 +79,6 @@ source "drivers/hwmon/Kconfig"
 
 source "drivers/thermal/Kconfig"
 
-source "drivers/trusty/Kconfig"
-
 source "drivers/watchdog/Kconfig"
 
 source "drivers/ssb/Kconfig"
@@ -214,13 +212,5 @@ source "drivers/fsi/Kconfig"
 source "drivers/tee/Kconfig"
 
 source "drivers/mux/Kconfig"
-
-source "drivers/p73-spi/6785/Kconfig"
-
-source "drivers/p73-spi/6853/Kconfig"
-
-source "drivers/p73-spi/6873/Kconfig"
-
-source "drivers/p73-spi/6889/Kconfig"
 
 endmenu
